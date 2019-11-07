@@ -4,7 +4,7 @@ import kotlin.math.min
 
 fun main() {
     println("start")
-    val progressBar = ProgressBar(ProgressBar.Parameters(20, 100, onePercentIncrementSpeed = 200), object : ProgressListener{
+    val progressBar = ProgressBarTimer(ProgressBarTimer.Parameters(20, 100, onePercentIncrementSpeed = 200), object : ProgressListener{
         override fun onProgress(timeDiff: Double, value: Int) {
             println("progress time diff $timeDiff and value $value")
         }
@@ -42,7 +42,7 @@ fun main() {
 
 }
 
-class ProgressBar(val parameters: Parameters, listener: ProgressListener) {
+class ProgressBarTimer(val parameters: Parameters, listener: ProgressListener) {
 
     private var started = false
 
@@ -61,7 +61,7 @@ class ProgressBar(val parameters: Parameters, listener: ProgressListener) {
         addProgressListener(listener)
     }
 
-    fun startProgress(): ProgressBar {
+    fun startProgress(): ProgressBarTimer {
         if (!started) {
             started = true
             lastStartTime = Date.now()

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/progressBarKJS.iml" filepath="$PROJECT_DIR$/progressBarKJS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/progressBarTimerKJS.iml" filepath="$PROJECT_DIR$/progressBarTimerKJS.iml" />
     </modules>
   </component>
 </project>
